@@ -15,7 +15,7 @@
             <tr>
                 <th>Nama</th>
                 <th>Harga</th>
-                <th>Stok</th>
+                <th>Stok</th>git push -u origin main
                 <th>Aksi</th>
             </tr>
         </thead>
