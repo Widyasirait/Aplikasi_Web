@@ -9,17 +9,21 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('product_logs', function (Blueprint $table) {
-    $table->id();
-    $table->unsignedBigInteger('product_id'); // <- tanpa foreign key
-    $table->string('nama_produk');
-    $table->string('aksi');
-    $table->string('deskripsi');
-    $table->timestamps();
-});
-    }
+    public function up()
+{
+    Schema::create('product_logs', function (Blueprint $table) {
+        $table->id();
+        $table->unsignedBigInteger('product_id');
+        $table->string('nama_produk');
+        $table->string('aksi');
+        $table->text('deskripsi')->nullable();
+        $table->timestamps();
+
+        // Relasi ke tabel products
+        $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+    });
+}
+
 
     /**
      * Reverse the migrations.

@@ -4,9 +4,20 @@
 <div class="container">
     <h2 class="mt-4 mb-4">Daftar Produk</h2>
 
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
+    @if (session('success'))
+    <div id="success-alert" class="alert alert-success">
+        {{ session('success') }}
+    </div>
     @endif
+
+    <script>
+    setTimeout(function () {
+        var alert = document.getElementById('success-alert');
+        if (alert) {
+            alert.style.display = 'none';
+        }
+    }, 1000); 
+</script>
 
     <div class="mb-3 d-flex justify-content-between">
         <a href="{{ route('products.riwayat') }}" class="btn btn-outline-secondary">Lihat Riwayat</a>

@@ -4,57 +4,54 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <style>
-        body {
-            background-color: #f0f8ff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         body {
+            background-color: #F0F8FF;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
 
         .container {
-            background: #ffffff;
-            padding: 40px 50px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            width: 400px;
+            background: #FFFFFF;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+            width: 350px;
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 25px;
-            color: #333;
+            color: #000000;
+            margin-bottom: 20px;
         }
 
         label {
-            font-weight: 600;
+            font-weight: bold;
+            color: #000000;
             display: block;
             margin-bottom: 6px;
-            color: #333;
         }
 
         input[type="email"],
         input[type="password"] {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 14px;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #000000;
+            border-radius: 5px;
         }
 
         button {
             width: 100%;
-            padding: 12px;
-            background-color: #000;
+            background-color: #000000;
             color: white;
-            font-weight: bold;
+            padding: 10px;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
-            font-size: 16px;
         }
 
         button:hover {
@@ -67,21 +64,14 @@
             font-size: 14px;
         }
 
-        .success {
-            color: green;
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
         .register-link {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
             font-size: 14px;
         }
 
         .register-link a {
-            color: #0066cc;
+            color: #0000FF;
             text-decoration: none;
             font-weight: bold;
         }
