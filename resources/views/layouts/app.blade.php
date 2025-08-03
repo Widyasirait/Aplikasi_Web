@@ -86,6 +86,65 @@
             margin-bottom: 20px;
             border-radius: 5px;
         }
+
+        /* Tambahan styling tombol */
+        .btn {
+            display: inline-block;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-sm {
+            font-size: 13px;
+            padding: 5px 10px;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #bd2130;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+
+        .btn-outline-secondary {
+            background-color: white;
+            color: #6c757d;
+            border: 1px solid #6c757d;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .me-1 {
+            margin-right: 0.25rem;
+        }
     </style>
 </head>
 <body>

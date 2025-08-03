@@ -95,10 +95,12 @@
     <div class="container">
         <h2>Login Akun</h2>
 
+        {{-- Pesan sukses dari sesi --}}
         @if (session('success'))
             <div class="success">{{ session('success') }}</div>
         @endif
 
+        {{-- Tampilkan error validasi --}}
         @if ($errors->any())
             <div class="error">
                 <ul style="margin: 0; padding-left: 20px;">
@@ -109,6 +111,7 @@
             </div>
         @endif
 
+        {{-- Form login --}}
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -121,6 +124,7 @@
             <button type="submit">Login</button>
         </form>
 
+        {{-- Link ke halaman register --}}
         <div class="register-link">
             Belum punya akun? <a href="{{ route('register') }}">Daftar di sini</a>
         </div>

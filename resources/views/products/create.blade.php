@@ -11,5 +11,9 @@
         <input type="number" name="stock" placeholder="Stok" required style="padding: 12px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;">
         <button type="submit" style="padding: 12px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">Simpan</button>
     </form>
+
+    <div class="mt-4" style="text-align: right;">
+    <a href="{{ route('products.index') }}" class="btn btn-secondary">← Kembali ke Daftar Produk</a>
+</div>
 </div>
 @endsection

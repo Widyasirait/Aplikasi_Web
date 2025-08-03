@@ -25,5 +25,9 @@
             Update
         </button>
     </form>
+
+    <div class="mt-4" style="text-align: right;">
+    <a href="{{ route('products.index') }}" class="btn btn-secondary">← Kembali ke Daftar Produk</a>
+</div>
 </div>
 @endsection

@@ -24,11 +24,14 @@
         h2 {
             text-align: center;
             color: #000000;
+            margin-bottom: 20px;
         }
 
         label {
             font-weight: bold;
             color: #000000;
+            display: block;
+            margin-bottom: 6px;
         }
 
         input[type="text"],
@@ -36,8 +39,7 @@
         input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-top: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             border: 1px solid #000000;
             border-radius: 5px;
         }
@@ -60,11 +62,13 @@
         .error {
             color: red;
             margin-bottom: 15px;
+            font-size: 14px;
         }
 
         .login-link {
             text-align: center;
             margin-top: 15px;
+            font-size: 14px;
         }
 
         .login-link a {
@@ -72,12 +76,17 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Form Register</h2>
 
+        {{-- Tampilkan validasi error --}}
         @if ($errors->any())
             <div class="error">
                 <ul style="margin: 0; padding-left: 18px;">
@@ -88,19 +97,21 @@
             </div>
         @endif
 
+        {{-- Form register --}}
         <form method="POST" action="{{ route('register.store') }}">
             @csrf
-            <label>Nama:</label><br>
-            <input type="text" name="name" required><br>
 
-            <label>Email:</label><br>
-            <input type="email" name="email" required><br>
+            <label for="name">Nama:</label>
+            <input type="text" name="name" id="name" required>
 
-            <label>Password:</label><br>
-            <input type="password" name="password" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-            <label>Konfirmasi Password:</label><br>
-            <input type="password" name="password_confirmation" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <label for="password_confirmation">Konfirmasi Password:</label>
+            <input type="password" name="password_confirmation" id="password_confirmation" required>
 
             <button type="submit">Daftar</button>
         </form>
